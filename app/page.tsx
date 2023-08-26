@@ -1,4 +1,4 @@
-import ImageButton from '@/app/components/image-button';
+import ImageButton from "@/app/components/image-button";
 
 export default function Home() {
 
