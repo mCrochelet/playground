@@ -1,4 +1,4 @@
-import ImageButton from '@/components/image-button';
+import ImageButton from '@/app/components/image-button';
 
 export default function Home() {
 
@@ -24,7 +24,7 @@ export default function Home() {
     <main className="flex flex-wrap min-h-screen p-24 place-content-center place-items-center">
       {
         blogs.map((blog) => (
-          <ImageButton name={blog.name} link={'/' + blog.link} image={'/' + blog.image} />
+          <ImageButton key="blog.link" name={blog.name} link={'/' + blog.link} image={'/' + blog.image} />
         ))
       }
     </main>

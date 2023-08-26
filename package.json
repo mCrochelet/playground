@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "lint": "next lint",
+    "test-ct": "playwright test -c playwright-ct.config.ts",
+    "test": "npm run lint && checkly test && npm run test-ct",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "@types/node": "20.4.5",
@@ -23,8 +25,9 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "checkly": "latest",
+    "@playwright/experimental-ct-react": "^1.37.1",
     "@playwright/test": "^1.36.2",
+    "checkly": "latest",
     "ts-node": "latest",
     "typescript": "latest"
   }
