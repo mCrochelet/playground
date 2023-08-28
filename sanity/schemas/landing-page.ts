@@ -1,8 +1,8 @@
-import {defineType} from 'sanity'
+import { defineType } from 'sanity'
 
 export default defineType({
-  name: 'category',
-  title: 'Category',
+  name: 'landingPage',
+  title: 'Landing page',
   type: 'document',
   fields: [
     {
@@ -11,9 +11,9 @@ export default defineType({
       type: 'string',
     },
     {
-      name: 'description',
-      title: 'Description',
-      type: 'text',
-    },
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+    }
   ],
-})
+});
