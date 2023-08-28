@@ -17,7 +17,7 @@ export default async function Home() {
       imageURL = '/loading.gif'
     }
     else {
-      imageURL = builder.image(page.image).width(500).fit('fillmax').auto('format').url();
+      imageURL = builder.image(page.image).url();
     }
 
     const link = `/${page.title.toLowerCase()}`
