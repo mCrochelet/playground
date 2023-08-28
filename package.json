@@ -9,7 +9,7 @@
     "studio:dev": "sanity dev",
     "studio:build": "sanity build",
     "test-ct": "playwright test -c playwright-ct.config.ts",
-    "test": "npm run lint && checkly test && npm run test-ct",
+    "test": "npm run lint && npm run test-ct",
     "build": "next build",
     "start": "next start"
   },
@@ -37,7 +37,6 @@
   "devDependencies": {
     "@playwright/experimental-ct-react": "^1.37.1",
     "@playwright/test": "^1.36.2",
-    "checkly": "latest",
     "ts-node": "latest"
   }
 }
