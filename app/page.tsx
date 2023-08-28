@@ -20,8 +20,11 @@ export default async function Home() {
       imageURL = builder.image(page.image).width(500).fit('fillmax').auto('format').url();
     }
 
+    const link = `/${page.title.toLowerCase()}`
+
     return {
       ...page,
+      link,
       imageURL
     }
   });
@@ -31,7 +34,7 @@ export default async function Home() {
     <main className="flex flex-wrap min-h-screen p-24 place-content-center place-items-center">
       {
         pages.map((page) => (
-          <ImageButton key="page.link" name={page.title} link={'/' + page.title} image={page.imageURL} />
+          <ImageButton key="page.link" name={page.title} link={page.link} image={page.imageURL} />
         ))
       }
     </main>
