@@ -1,9 +1,9 @@
 import ImageButton from "@/app/components/image-button";
-import getLandingPages from "./api/get-page";
+import { getLandingPages } from "./api/get-page";
 import imageUrlBuilder from '@sanity/image-url';
 import { SanityClient } from '@/sanity/lib/client';
 
-export default async function Home() {
+export default async function LandingPage() {
 
   const landingPages = await getLandingPages();
   const builder = imageUrlBuilder(SanityClient);
@@ -17,7 +17,7 @@ export default async function Home() {
       imageURL = '/loading.gif'
     }
     else {
-      imageURL = builder.image(page.image).url();
+      imageURL = builder.image(page.image).width(1024).height(1024).url();
     }
 
     const link = `/${page.title.toLowerCase()}`
