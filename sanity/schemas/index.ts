@@ -1,3 +1,4 @@
-import langingPage from "./landing-page";
+import landingPage from "./landing-page";
+import homePage from "./home-page";
 
-export const schemaTypes = [langingPage]
+export const schemaTypes = [landingPage, homePage]
