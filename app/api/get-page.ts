@@ -7,7 +7,7 @@ export async function getLandingPages() {
     return posts
 };
 
-export async function getHomePage({person}: {person: string}) {
+export async function getHomePage({ person }: { person: string }) {
 
     const posts = await SanityClient.fetch('*[_type == "page"]')
     return posts

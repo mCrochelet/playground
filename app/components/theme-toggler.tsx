@@ -1,7 +1,5 @@
 'use client';
 
-import { useState } from 'react';
-
 export default function ThemeToggler({ theme }: { theme: string }) {
 
     const path = theme === 'dark' ?
@@ -10,13 +8,13 @@ export default function ThemeToggler({ theme }: { theme: string }) {
 
     return (
         <>
-            <div className="fixed h-12 w-12 rounded-full bg-darkBackground dark:bg-lightBackground group-hover:opacity-20"></div>
-            <svg className="fixed h-10 w-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="absolute h-12 w-12 rounded-full bg-darkBackground dark:bg-lightBackground group-hover:opacity-20"></div>
+            <svg className="absolute h-10 w-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path className="stroke-lightBackground group-hover:stroke-darkBackground dark:stroke-darkBackground dark:group-hover:stroke-lightBackground"
                     d={path}
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                 />
             </svg>
         </>

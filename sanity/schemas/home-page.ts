@@ -11,6 +11,15 @@ export default defineType({
             type: 'string',
         },
         {
+            name: 'type',
+            title: 'Type',
+            type: 'string',
+            options: {
+                // inspiration: https://rezarezaeipour.com
+                list: ['reza-style']
+            }
+        },
+        {
             name: 'image',
             title: 'Image',
             type: 'image',

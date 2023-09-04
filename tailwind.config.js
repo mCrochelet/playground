@@ -7,6 +7,12 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+    extend: {
+      scale: {
+        200: '2',
+        300: '3'
+      }
+    },
     colors: {
       darkBackground: '#1e1e1e',
       lightBackground: '#e9e8e6',

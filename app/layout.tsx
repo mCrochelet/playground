@@ -15,7 +15,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
   const [theme, setTheme] = useState('light');
 
   return (
-    <html lang="en" className={`min-h-screen ${theme}`}>
+    <html lang="en" className={`min-h-screen ${theme} min-w-[480px] overflow-x-hidden`}>
       <Analytics />
       <body className={inter.className + ' min-h-screen bg-lightBackground dark:bg-darkBackground text-darkBackground dark:text-lightBackground'}>
         <div className="flex justify-center place-items-center absolute bottom-4 right-4 h-10 w-10 cursor-pointer group"

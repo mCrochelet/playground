@@ -1,8 +1,10 @@
 import { getHomePage } from "../api/get-page";
+import Footer from "../components/footer";
 import Navigation from "../components/navigation";
 
 export default async function PersonLayout({ children, params }: { children: React.ReactNode, params: { person: string } }) {
 
+    // todo: build anchor links 
     // const anchorLinks = [
     //     { name: "Home", link: '#home' },
     //     { name: "Skills", link: "#skills" },
@@ -12,14 +14,12 @@ export default async function PersonLayout({ children, params }: { children: Rea
     // ];
 
     const { person } = params;
-    const page = await getHomePage({ person });
-
-    // console.log(page);
-
+    
     return (
-        <section className="min-h-screen flex flex-col">
+        <section className="flex flex-col max-w-full">
             <Navigation left={person} />
             {children}
+            <Footer />
         </section>
     )
 }

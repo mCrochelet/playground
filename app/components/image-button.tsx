@@ -8,6 +8,7 @@ export default function ImageButton({ name, image, link }: { name: string, image
         return null;
     }
 
+    // todo: handle different screen sizes, currently chrome gives half the height of safari
     return (
         <Link className="relative flex-item m-8 basis-96 group" href={link}>
             <h1 className='absolute z-40 bottom-4 right-4 text-center text-bold text-4xl'>{name}</h1>
